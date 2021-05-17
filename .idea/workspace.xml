@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef81e0db-b0f5-4112-b487-c8b8c6ad1402" name="Default Changelist" comment="">
+    <list default="true" id="ef81e0db-b0f5-4112-b487-c8b8c6ad1402" name="Default Changelist" comment="Optimized grouping on streams at Coordinator">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/services.scalable.scheduler/server/Coordinator.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/services.scalable.scheduler/server/Coordinator.scala" afterDir="false" />
     </list>
@@ -80,6 +80,14 @@
       <option name="presentableId" value="Default" />
       <updated>1621208057263</updated>
     </task>
+    <task id="LOCAL-00001" summary="Optimized grouping on streams at Coordinator">
+      <created>1621213912417</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1621213912417</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -95,5 +103,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Optimized grouping on streams at Coordinator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimized grouping on streams at Coordinator" />
   </component>
 </project>
