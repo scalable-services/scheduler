@@ -1,11 +1,11 @@
 organizationName := "services.scalable"
 name := "scheduler"
 
-version := "main"
+version := "0.1"
 
 scalaVersion := "2.13.5"
 
-val jacksonVersion = "2.11.4"
+val jacksonVersion = "2.12.3"
 lazy val akkaVersion = "2.6.14"
 lazy val akkaHttpVersion = "10.2.3"
 
@@ -35,7 +35,10 @@ libraryDependencies ++= Seq(
 
   "com.typesafe.akka" %% "akka-stream-kafka" % "2.1.0",
   "com.typesafe.akka" %% "akka-stream" % akkaVersion,
-  "com.fasterxml.jackson.core" % "jackson-databind" % jacksonVersion,
+
+  "com.typesafe.akka" %% "akka-serialization-jackson" % akkaVersion,
+
+  "com.fasterxml.jackson.module" %% "jackson-module-scala" % jacksonVersion,
 
   "io.vertx" % "vertx-kafka-client" % "4.0.3",
 
@@ -44,5 +47,7 @@ libraryDependencies ++= Seq(
  // "com.datastax.oss" % "java-driver-core" % "4.7.2",
 
 )
+
+//libraryDependencies += "com.fasterxml.jackson.core" % "jackson-databind" % "2.11.4" force()
 
 enablePlugins(AkkaGrpcPlugin)

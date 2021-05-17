@@ -8,6 +8,7 @@ import akka.stream.scaladsl.{Sink, Source}
 import com.datastax.oss.driver.api.core.cql.{BatchStatement, BatchType}
 import com.datastax.oss.driver.api.core.{CqlSession, DefaultConsistencyLevel}
 import com.google.protobuf.any.Any
+import com.typesafe.config.ConfigFactory
 import io.vertx.core.Vertx
 import io.vertx.kafka.client.producer.{KafkaProducer, KafkaProducerRecord}
 import org.apache.commons.lang3.RandomStringUtils
@@ -33,7 +34,7 @@ import scala.concurrent.duration._
 
 class Coordinator(val name: String, val id: Int, val port: Int)(implicit ec: ExecutionContext) extends CoordinatorService {
 
-  val system = ActorSystem.create()
+  val system = ActorSystem.create("Coordinator", ConfigFactory.empty())
   implicit val provider = system.classicSystem
 
   val logger = LoggerFactory.getLogger(this.getClass)
