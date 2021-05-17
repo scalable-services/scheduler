@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package services.scalable.scheduler.protocol;
+
+import "protocol.proto";
+
+//#options
+option java_multiple_files = true;
+option java_package = "services.scalable.scheduler.protocol";
+option java_outer_classname = "CoordinatorService";
+
+//#options
+
+//#services
+service CoordinatorService {
+    rpc Submit (Command) returns (TaskResponse) {}
+}
+
+//#services

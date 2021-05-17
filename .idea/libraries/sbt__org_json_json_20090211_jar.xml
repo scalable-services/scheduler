@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sbt: org.json:json:20090211:jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/%LOCALAPPDATA%/Coursier/Cache/v1/https/repo1.maven.org/maven2/org/json/json/20090211/json-20090211.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
