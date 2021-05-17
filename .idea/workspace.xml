@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef81e0db-b0f5-4112-b487-c8b8c6ad1402" name="Default Changelist" comment="Implemented Akka Sharding :)">
+      <change afterPath="$PROJECT_DIR$/cassandra.cql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,12 +152,20 @@
       <option name="project" value="LOCAL" />
       <updated>1621272157428</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Implemented Akka Sharding :)">
+      <created>1621278823753</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1621278823753</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.cmd" />
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.cql" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
