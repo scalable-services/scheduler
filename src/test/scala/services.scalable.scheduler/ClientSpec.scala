@@ -131,7 +131,7 @@ class ClientSpec extends AnyFlatSpec with Repeatable {
 
     var tasks = Seq.empty[Future[TaskResponse]]
 
-    for(i<-0 until 1000){
+    for(i<-0 until 100){
       tasks = tasks :+ submit()
     }
 
