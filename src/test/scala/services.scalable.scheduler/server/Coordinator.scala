@@ -293,7 +293,7 @@ class Coordinator(val name: String, val id: Int, val port: Int)(implicit ec: Exe
       .committableSource(consumerSettings,
         Subscriptions.assignment(new TopicPartition(Topics.COORDINATORS, id)))
       //.grouped(10)
-      .groupedWithin(100, 1 second)
+      .groupedWithin(100, 10 milliseconds)
       //.batch(100, )
       .mapAsync(1){ list =>
         handler(list)
