@@ -14,7 +14,7 @@ import io.vertx.core.Vertx
 import io.vertx.kafka.client.common.TopicPartition
 import io.vertx.kafka.client.consumer.KafkaConsumer
 import org.apache.kafka.clients.consumer.ConsumerConfig
-import org.apache.kafka.clients.producer.ProducerRecord
+import org.apache.kafka.clients.producer.{ProducerConfig, ProducerRecord}
 import org.apache.kafka.common.serialization.{ByteArraySerializer, StringSerializer}
 import services.scalable.scheduler.protocol._
 
@@ -98,6 +98,9 @@ object Aggregator {
     consumerConfig.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false")*/
     consumerConfig.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer")
     consumerConfig.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.ByteArrayDeserializer")
+    consumerConfig.put(ConsumerConfig.MAX_POLL_INTERVAL_MS_CONFIG, "5")
+    consumerConfig.put(ConsumerConfig.FETCH_MAX_WAIT_MS_CONFIG, "10")
+    consumerConfig.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, "100")
 
     val consumer = KafkaConsumer.create[String, Array[Byte]](vertx, consumerConfig.asJava)
 
@@ -106,6 +109,7 @@ object Aggregator {
 
     val kafkaProducer = producerSettings.createKafkaProducer()
     val settingsWithProducer = producerSettings.withProducer(kafkaProducer)
+      .withParallelism(10)
 
     val offsets = TrieMap.empty[Int, Long]
     val partitions = TrieMap.empty[Int, TopicPartition]

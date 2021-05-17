@@ -79,11 +79,11 @@ package object scheduler {
     //in ms
     val COORDINATOR_BATCH_INTERVAL = 10L
 
-    val MAX_COORDINATOR_BUFFER_SIZE = 20
+    val MAX_COORDINATOR_BUFFER_SIZE = 100
 
-    val AGGREGATOR_INTERVAL = 100L
+    val AGGREGATOR_INTERVAL = 10L
 
-    val MAX_SCHEDULER_POLL_RECORDS = 10L
+    val MAX_SCHEDULER_POLL_RECORDS = 100
   }
 
   var topics = Map(

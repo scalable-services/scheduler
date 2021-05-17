@@ -456,8 +456,10 @@ object Scheduler {
       .withGroupId(s"$name-consumer")
       .withProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "latest")
       .withClientId(s"$name-client")
-      .withPollInterval(java.time.Duration.ofMillis(10L))
-      .withStopTimeout(java.time.Duration.ofHours(1))
+      .withPollInterval(java.time.Duration.ofMillis(5L))
+      .withProperty(ConsumerConfig.FETCH_MAX_WAIT_MS_CONFIG, "10")
+      .withStopTimeout(java.time.Duration.ofDays(1))
+      .withProperty(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, "100")
     //.withStopTimeout(java.time.Duration.ofSeconds(1000L))
 
     val committerSettings = CommitterSettings(streamsSystem).withDelivery(CommitDelivery.waitForAck)
@@ -466,6 +468,7 @@ object Scheduler {
 
     val control = Consumer
         .committableSource(consumerSettings, Subscriptions.topics(Topics.LOG))
+        //.groupedWithin(Config.MAX_SCHEDULER_POLL_RECORDS, 10 milliseconds)
         .mapAsync(1) { msg =>
           //handler(msg).map(_ => msg.committableOffset)
 
