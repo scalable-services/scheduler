@@ -1,7 +1,7 @@
 organizationName := "services.scalable"
 name := "scheduler"
 
-version := "0.2"
+version := "main"
 
 scalaVersion := "2.13.5"
 
