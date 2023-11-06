@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef81e0db-b0f5-4112-b487-c8b8c6ad1402" name="Default Changelist" comment="Optimized grouping on streams at Coordinator">
-      <change afterPath="$PROJECT_DIR$/imgs/scheduler.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="ef81e0db-b0f5-4112-b487-c8b8c6ad1402" name="Default Changelist" comment="created README." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1621220481588</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="created README.">
+      <option name="closed" value="true" />
+      <created>1699314276450</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699314276450</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -128,6 +132,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Optimized grouping on streams at Coordinator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimized grouping on streams at Coordinator" />
+    <MESSAGE value="created README." />
+    <option name="LAST_COMMIT_MESSAGE" value="created README." />
   </component>
 </project>
